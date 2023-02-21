@@ -71,8 +71,8 @@ function App() {
     setTodos(filteredTodos);
     setActiveTab("completed");
   };
-  let person={name:"Selin",city:"Ankara",favoriteColor:"aqua blue"};
-let {name:foo}=person;
+
+  
 
   return (
     <div className="App">
