@@ -2,11 +2,16 @@ import "./App.css";
 
 import { useState } from "react";
 
+/* 
+  todos = [{'q', compltedet: true}, {'w', compltedet: false}]
+*/
+
 function App() {
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState({ title: "", completed: false });
   const [activeTab, setActiveTab] = useState("all");
   const [tempTodos, setTempTodos] = useState([]);
+
   const formSubmit = (e) => {
     e.preventDefault();
     setTodos([...todos, todo]);
@@ -50,7 +55,7 @@ function App() {
 
   const showAll = () => {
     setTodos([...tempTodos]);
-    setActiveTab('all')
+    setActiveTab("all");
   };
 
   const filterActiveTodo = () => {
@@ -66,6 +71,8 @@ function App() {
     setTodos(filteredTodos);
     setActiveTab("completed");
   };
+  let person={name:"Selin",city:"Ankara",favoriteColor:"aqua blue"};
+let {name:foo}=person;
 
   return (
     <div className="App">
@@ -84,6 +91,7 @@ function App() {
             />
           </form>
         </header>
+       
 
         <section className="main">
           <div>
@@ -115,27 +123,6 @@ function App() {
                 </li>
               );
             })}
-            {/* <li className="completed">
-              <div className="view">
-                <input className="toggle" type="checkbox" />
-                <label>Learn JavaScript</label>
-                <button className="destroy"></button>
-              </div>
-            </li>
-            <li>
-              <div className="view">
-                <input className="toggle" type="checkbox" />
-                <label>Learn React</label>
-                <button className="destroy"></button>
-              </div>
-            </li>
-            <li>
-              <div className="view">
-                <input className="toggle" type="checkbox" />
-                <label>Have a life!</label>
-                <button className="destroy"></button>
-              </div>
-            </li> */}
           </ul>
         </section>
 
@@ -177,7 +164,7 @@ function App() {
             </li>
           </ul>
 
-          <button onClick={clearCompleted}  className="clear-completed">
+          <button onClick={clearCompleted} className="clear-completed">
             Clear completed
           </button>
         </footer>
