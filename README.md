@@ -1,6 +1,6 @@
-#Netlify
+# Netlify
 
-patika-react-todo.netlify.app
+[patika-react-todo](https://patika-react-todo.netlify.app/)
 
 # Getting Started with Create React App
 
